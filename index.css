@@ -14,5 +14,11 @@ img {
   height: 50px;
   width: 150px;
   margin-bottom: 1%;
+  border: none;
   display: block;
+  background: #30C223;
+}
+
+.home-btn:hover {
+  cursor: pointer;
 }
