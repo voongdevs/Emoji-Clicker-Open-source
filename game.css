@@ -44,3 +44,11 @@
 .counter-value {
     padding-left: 10px;
 }
+
+.menu {
+    border: 1px solid black;
+}
+
+.menu:hover {
+    background-color: lightgray;
+}
