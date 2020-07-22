@@ -45,12 +45,17 @@
     padding-left: 10px;
 }
 
-.menu {
+.menu-container {
     border: 1px solid black;
 }
 
-.menu:hover {
-    background-color: lightgray;
+.menu {
+    display: none;
+    transition: .5s;
+}
+
+.menu > *:hover {
+background: lightgray
 }
 
 /* shop */
