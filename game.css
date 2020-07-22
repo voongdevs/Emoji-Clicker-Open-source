@@ -52,3 +52,36 @@
 .menu:hover {
     background-color: lightgray;
 }
+
+/* shop */
+.shop-overlay {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    flex-direction: column;
+    display: none;
+    background: gray;
+}
+
+.shop-header {
+    display: flex;
+    align-items: center;
+}
+
+.shop-main {
+
+}
+
+.upgrade-row {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+.upgrade {
+    width: 100px;
+    padding: 20px;
+}
+
+.shop-footer {
+    
+}
