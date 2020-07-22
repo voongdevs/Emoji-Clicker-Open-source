@@ -8,11 +8,11 @@
 
 .info-icon {
     height: 20px;
+    margin-left: auto;
 }
 
 .game-header {
     display:flex;
-    justify-content: space-between;
     width: 100%;
 }
 
