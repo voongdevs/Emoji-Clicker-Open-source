@@ -1,23 +1,23 @@
-img {
-    height: 200px;
-    width: 200px;
-}
 
 .page-container {
     min-height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
 .info-icon {
     height: 20px;
-    width: 100%;
-    text-align: right;
-    margin-left: auto
 }
 
 .game-header {
-    display:flex
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-basis: 10%;
+}
+
+.grin-icon {
+    height: 200px;
+    width: 200px;
 }
