@@ -9,7 +9,7 @@ function clickEmoji(){
     render()
 }
 function render(){
-    document.querySelector(".counter-value").innerText = money
+    document.querySelectorAll(".counter-value").forEach(counter => counter.innerText = money)
 }
 
 /* shop functions */
