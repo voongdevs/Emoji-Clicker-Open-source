@@ -1,6 +1,9 @@
 let money = 0
+const upgradesBought = []
+
 function init(){ 
     document.querySelector(".grin-icon").addEventListener("click", clickEmoji)
+    document.querySelector(".export").addEventListener("click", exportData)
     document.querySelector(".shopcart-icon").addEventListener("click", showShop)
     document.querySelector(".exit-shop-icon").addEventListener("click", hideShop)
     document.querySelector(".menu-container").addEventListener("click", toggleMenu)
@@ -11,6 +14,19 @@ function clickEmoji(){
 }
 function render(){
     document.querySelectorAll(".counter-value").forEach(counter => counter.innerText = money)
+}
+
+/* menu options */
+
+function exportData() {
+    const data = JSON.stringify({
+        money: money,
+        upgradesBought: upgradesBought
+    })
+    let a = document.createElement('a');
+    a.href = "data:application/octet-stream,"+encodeURIComponent(data);
+    a.download = 'save.txt';
+    a.click();
 }
 
 /* shop functions */
