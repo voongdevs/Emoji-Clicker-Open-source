@@ -69,17 +69,24 @@
 }
 
 .shop-main {
-
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .upgrade-row {
-    flex-grow: 1;
+    width: 700px;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .upgrade {
     width: 100px;
+    margin: 10px;
     padding: 20px;
+    background: red;
+    border: 1px solid black;
 }
 
 .shop-footer {
