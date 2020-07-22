@@ -38,4 +38,9 @@
 .counter-icon {
     height: 20px;
     width: 20px;
+    padding-left: 20px;
+}
+
+.counter-value {
+    padding-left: 10px;
 }
