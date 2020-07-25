@@ -30,6 +30,11 @@ body {
     width: 200px;
 }
 
+.grin-icon:hover:not(:active) {
+    height: 250px;
+    width: 250px;
+}
+
 .game-footer {
     margin-right: auto;
 }

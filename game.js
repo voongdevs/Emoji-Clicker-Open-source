@@ -3,20 +3,25 @@ let multiplier = 1
 let upgradesBought = []
 
 function init(){ 
+    // click
     document.querySelector(".grin-icon").addEventListener("click", clickEmoji)
 
+    // data
     document.querySelector(".export").addEventListener("click", exportData)
     document.querySelector(".import").addEventListener("change", importData)
 
+    // shop
     document.querySelector(".shopcart-icon").addEventListener("click", showShop)
     document.querySelector(".exit-shop-icon").addEventListener("click", hideShop)
 
+    // Info
     document.querySelector(".info-icon").addEventListener("click", showInfo)
-
     document.querySelector(".exit-help-icon").addEventListener("click", hideInfo)
 
+    // Menu
     document.querySelector(".menu-container").addEventListener("click", toggleMenu)
 
+    //upgrade  
     document.querySelector("#upgrade1").addEventListener("click", function(){
         if (money >= 50 && !upgradesBought.includes("#upgrade1")) {
             money = money - 50 
@@ -33,6 +38,7 @@ function clickEmoji(){
     money = money + moneyToAdd * multiplier
     render()
 }
+
 function render(){
     document.querySelectorAll(".counter-value").forEach(counter => counter.innerText = money)
 }
