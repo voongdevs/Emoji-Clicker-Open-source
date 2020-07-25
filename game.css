@@ -1,3 +1,7 @@
+body {
+    background-color: #42253B;  
+}
+
 
 .page-container {
     min-height: 100vh;
@@ -119,3 +123,6 @@ input[type="file"]{
 #detail-1 {
     font-style: italic;
 }
+
+
+         
