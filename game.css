@@ -125,5 +125,12 @@ input[type="file"]{
     font-style: italic;
 }
 
-
+/* Help */
+.info-overlay {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    flex-direction: column;
+    background: gray;
+}
          

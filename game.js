@@ -11,6 +11,9 @@ function init(){
     document.querySelector(".shopcart-icon").addEventListener("click", showShop)
     document.querySelector(".exit-shop-icon").addEventListener("click", hideShop)
 
+    document.querySelector(".info-icon").addEventListener("click", showInfo)
+    document.querySelector(".info-icon").addEventListener("click", hideInfo)
+
     document.querySelector(".menu-container").addEventListener("click", toggleMenu)
 
     document.querySelector("#upgrade1").addEventListener("click", function(){
@@ -79,3 +82,12 @@ function toggleMenu() {
 }
 
 init()
+
+/* Help functions */
+function showInfo() {
+    document.querySelector(".info-overlay").style.display = "flex"
+}
+
+function hideInfo() {
+    document.querySelector(".info-overlay").style.display = "none"
+}
