@@ -18,6 +18,7 @@ function init(){
             money = money - 50 
             upgradesBought.push("#upgrade1") 
             multiplier = multiplier * 2
+            document.querySelector("#upgrade1").classList.add("bought")
             render()
         }
     })
