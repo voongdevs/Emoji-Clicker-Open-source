@@ -1,9 +1,10 @@
 let money = 0
-const upgradesBought = []
+let upgradesBought = []
 
 function init(){ 
     document.querySelector(".grin-icon").addEventListener("click", clickEmoji)
     document.querySelector(".export").addEventListener("click", exportData)
+    document.querySelector(".import").addEventListener("change", importData)
     document.querySelector(".shopcart-icon").addEventListener("click", showShop)
     document.querySelector(".exit-shop-icon").addEventListener("click", hideShop)
     document.querySelector(".menu-container").addEventListener("click", toggleMenu)
@@ -27,6 +28,21 @@ function exportData() {
     a.href = "data:application/octet-stream,"+encodeURIComponent(data);
     a.download = 'save.txt';
     a.click();
+}
+
+function importData() {
+    const reader = new FileReader();
+    const file = document.querySelector("input[type=file]").files[0]
+    reader.readAsText(file, "UTF-8");
+    reader.onload = function (e) {
+        const data = JSON.parse(e.target.result)
+        money = data.money
+        upgradesBought = data.upgradesBought
+        render()
+    }
+    reader.onerror = function (evt) {
+        document.getElementById("fileContents").innerHTML = "error reading file";
+    }
 }
 
 /* shop functions */
