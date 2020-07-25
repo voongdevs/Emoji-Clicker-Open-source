@@ -1,4 +1,6 @@
-
+body {
+    font-family: sans-serif;
+}
 
 .page-container {
     min-height: 100vh;
@@ -131,12 +133,22 @@ input[type="file"]{
     width: 100vw;
     position: fixed;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     background: gray;
     display: none;
 }
 
 .help-header {
+    width: 50%;
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
-         
+.help-header h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+.help-main {
+    text-align: center;
+}
