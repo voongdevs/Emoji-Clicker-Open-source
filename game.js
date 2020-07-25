@@ -14,15 +14,17 @@ function init(){
     document.querySelector(".menu-container").addEventListener("click", toggleMenu)
 
     document.querySelector("#upgrade1").addEventListener("click", function(){
-        upgradesBought.push("#upgrade1") 
-        multiplier = multiplier * 2
+        if (money >= 50 && !upgradesBought.includes("#upgrade1")) {
+            money = money - 50 
+            upgradesBought.push("#upgrade1") 
+            multiplier = multiplier * 2
+            render()
+        }
     })
 }
 function clickEmoji(){
     let moneyToAdd = 1 
     console.log(upgradesBought)
-    if (upgradesBought.includes("#upgrade1")){
-    }
     money = money + moneyToAdd * multiplier
     render()
 }
