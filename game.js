@@ -12,7 +12,8 @@ function init(){
     document.querySelector(".exit-shop-icon").addEventListener("click", hideShop)
 
     document.querySelector(".info-icon").addEventListener("click", showInfo)
-    document.querySelector(".info-icon").addEventListener("click", hideInfo)
+
+    document.querySelector(".exit-help-icon").addEventListener("click", hideInfo)
 
     document.querySelector(".menu-container").addEventListener("click", toggleMenu)
 
@@ -85,9 +86,10 @@ init()
 
 /* Help functions */
 function showInfo() {
-    document.querySelector(".info-overlay").style.display = "flex"
+    document.querySelector(".help-overlay").style.display = "flex"
+    console.log("")
 }
 
 function hideInfo() {
-    document.querySelector(".info-overlay").style.display = "none"
+    document.querySelector(".help-overlay").style.display = "none"
 }
