@@ -129,7 +129,7 @@ input[type="file"]{
     width: 100px;
 }
 
-#detail-1 {
+#detail-2 {
     font-style: italic;
 }
 
@@ -157,4 +157,9 @@ input[type="file"]{
 }
 .help-main {
     text-align: center;
+}
+
+.thonk {
+    height: 100px;
+    width: 100px;
 }
