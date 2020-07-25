@@ -28,6 +28,7 @@ body {
 .grin-icon {
     height: 200px;
     width: 200px;
+    user-select: none;
 }
 
 .grin-icon:hover:not(:active) {
