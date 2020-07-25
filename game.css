@@ -57,6 +57,9 @@
 .menu > *:hover {
 background: lightgray
 }
+input[type="file"]{
+    color: transparent; /*text will be there but not visible*/
+}
 
 /* shop */
 .shop-overlay {
