@@ -22,15 +22,24 @@ function init(){
     document.querySelector(".menu-container").addEventListener("click", toggleMenu)
 
     //upgrade  
-    document.querySelector("#upgrade1").addEventListener("click", function(){
-        if (money >= 50 && !upgradesBought.includes("#upgrade1")) {
-            money = money - 50 
-            upgradesBought.push("#upgrade1") 
-            multiplier = multiplier * 2
-            document.querySelector("#upgrade1").classList.add("bought")
-            render()
+    document.querySelectorAll(".upgrade").forEach(
+        function(upgrade) {
+            upgrade.addEventListener("click", function(event){
+                const cost = event.currentTarget.querySelector(".cost").innerText
+                const upgradeName = event.currentTarget.getAttribute('id')
+                console.log(upgradeName)
+                console.log(upgradesBought)
+                console.log(cost)
+                if (money >= cost && !upgradesBought.includes(upgradeName)) {
+                    money = money - cost 
+                    upgradesBought.push(upgradeName) 
+                    multiplier = multiplier * 2
+                    document.querySelector(`#${upgradeName}`).classList.add("bought")
+                    render()
+                }
+            })
         }
-    })
+    )
 }
 function clickEmoji(){
     let moneyToAdd = 1 
