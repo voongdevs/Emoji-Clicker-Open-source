@@ -1,16 +1,29 @@
 let money = 0
+let multiplier = 1
 let upgradesBought = []
 
 function init(){ 
     document.querySelector(".grin-icon").addEventListener("click", clickEmoji)
+
     document.querySelector(".export").addEventListener("click", exportData)
     document.querySelector(".import").addEventListener("change", importData)
+
     document.querySelector(".shopcart-icon").addEventListener("click", showShop)
     document.querySelector(".exit-shop-icon").addEventListener("click", hideShop)
+
     document.querySelector(".menu-container").addEventListener("click", toggleMenu)
+
+    document.querySelector("#upgrade1").addEventListener("click", function(){
+        upgradesBought.push("#upgrade1") 
+        multiplier = multiplier * 2
+    })
 }
 function clickEmoji(){
-    money++
+    let moneyToAdd = 1 
+    console.log(upgradesBought)
+    if (upgradesBought.includes("#upgrade1")){
+    }
+    money = money + moneyToAdd * multiplier
     render()
 }
 function render(){
