@@ -1,5 +1,5 @@
 body {
-    background-color: #42253B;  
+    background-color: #969696;  
 }
 
 
@@ -37,6 +37,10 @@ body {
 
 .shopcart-icon {
     width: 25px;
+}
+
+.shopcart-icon:before{
+    content: "Shop"
 }
 
 .counter-icon {
